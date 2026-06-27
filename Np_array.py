@@ -17,3 +17,6 @@ print('shape=',arr2.shape)
 print('dimension=',arr2.ndim)
 print('data type=',arr3.dtype)
 print('total element=',arr1.size)
+
+zeros = np.zeros([2,3])
+print(zeros)
