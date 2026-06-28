@@ -38,6 +38,14 @@ arry = np.array([[1,4,6],
                  [7,2,5],
                  [9,8,3]])
 
-print(arry[1,1]) #Indiv element
-print(arry[0]) #row access
-print(arry[:,2]) #coloumn access
+# print(arry[1,1]) #Indiv element
+# print(arry[0]) #row access
+# print(arry[:,2]) #coloumn access
+
+a = np.array([11, 2, 31])
+b = np.array([4, 1, 6])
+
+print("Addition:", a + b)
+print("Subtraction:", a - b)
+print("Multiplication:", a * b)
+print("Division:", a / b)
