@@ -26,10 +26,18 @@ a =[]
 for x in py_list:
     a.append(x*2)
 
-print(len(a))
-print(a[:5])
-print(py_list[:5])
+# print(len(a))
+# print(a[:5])
+# print(py_list[:5])
 
-print(f"numpy time {tt:.9f}")
+# print(f"numpy time {tt:.9f}")
 
-print(f"list time {ttt:.9f}")
+# print(f"list time {ttt:.9f}")
+
+arry = np.array([[1,4,6],
+                 [7,2,5],
+                 [9,8,3]])
+
+print(arry[1,1]) #Indiv element
+print(arry[0]) #row access
+print(arry[:,2]) #coloumn access
