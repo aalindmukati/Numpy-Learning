@@ -45,7 +45,13 @@ arry = np.array([[1,4,6],
 a = np.array([11, 2, 31])
 b = np.array([4, 1, 6])
 
-print("Addition:", a + b)
-print("Subtraction:", a - b)
-print("Multiplication:", a * b)
-print("Division:", a / b)
+# print("Addition:", a + b)
+# print("Subtraction:", a - b)
+# print("Multiplication:", a * b)
+# print("Division:", a/b)
+# print('Dot product', np.dot(a,b))
+
+arre = np.arange(1,10)
+reshaped = arre.reshape(3,3)
+falttened = reshaped.flatten()
+print(falttened)
