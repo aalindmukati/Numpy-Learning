@@ -12,5 +12,6 @@ print(tips.shape)
 print(tips.head())
 
 figax1 = plt.subplots(figsize=(15,4))
-sns.histplot(tips['total_bill'])
-plt.show()
+# sns.histplot(tips['total_bill'],kde=True)
+# plt.title('Bill distribution')
+
