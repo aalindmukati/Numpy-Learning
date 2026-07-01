@@ -10,3 +10,7 @@ sns.set_palette('viridis')
 print(tips.shape)
 
 print(tips.head())
+
+figax1 = plt.subplots(figsize=(15,4))
+sns.histplot(tips['total_bill'])
+plt.show()
