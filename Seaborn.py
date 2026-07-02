@@ -11,7 +11,7 @@ print(tips.shape)
 
 print(tips.head())
 
-figax1 = plt.subplots(figsize=(15,4))
+figax1 = plt.subplots(figsize=(15,8))
 
 #--------------Histogram----------------
 # sns.histplot(tips['total_bill'],kde=True)
@@ -23,7 +23,15 @@ figax1 = plt.subplots(figsize=(15,4))
 #---------------------------------------
 
 #--------------Count-Plot----------------
-sns.countplot(x='day',data=tips,palette='pastel',hue='sex')
-plt.xlabel('Day',fontsize=12)
-plt.ylabel('Counting',fontsize=12)
+# sns.countplot(x='day',data=tips,palette='pastel',hue='sex')
+# plt.xlabel('Day',fontsize=12)
+# plt.ylabel('Counting',fontsize=12)
+#---------------------------------------
+
+#--------------Scatter-Plot----------------
+# sns.scatterplot(x='total_bill',y='tip',palette='cool',hue='sex',data=tips)
+# plt.xlabel('Gender',fontsize=12)
+# plt.ylabel('Tip Amount',fontsize=12)
+#---------------------------------------
+
 plt.show()
