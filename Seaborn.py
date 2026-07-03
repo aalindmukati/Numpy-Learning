@@ -34,4 +34,11 @@ figax1 = plt.subplots(figsize=(15,8))
 # plt.ylabel('Tip Amount',fontsize=12)
 #---------------------------------------
 
+
+#--------------Pair-Plot----------------
+sns.pairplot(tips,hue='sex',diag_kind='kde',palette='rocket')
+plt.suptitle('Pair wise relationship')
+#---------------------------------------
+
+
 plt.show()
