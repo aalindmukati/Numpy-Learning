@@ -11,7 +11,7 @@ print(tips.shape)
 
 print(tips.head())
 
-figax1 = plt.subplots(figsize=(15,8))
+# figax1 = plt.subplots(figsize=(15,8))
 
 #--------------Histogram----------------
 # sns.histplot(tips['total_bill'],kde=True)
@@ -34,11 +34,14 @@ figax1 = plt.subplots(figsize=(15,8))
 # plt.ylabel('Tip Amount',fontsize=12)
 #---------------------------------------
 
-
 #--------------Pair-Plot----------------
-sns.pairplot(tips,hue='sex',diag_kind='kde',palette='rocket')
-plt.suptitle('Pair wise relationship')
+# sns.pairplot(tips,hue='sex',diag_kind='kde',palette='rocket')
+# plt.suptitle('Pair wise relationship')
 #---------------------------------------
 
+#--------------Heatmap------------------
+cor_mat=tips.corr(numeric_only=True)
+plt.figure(figsize=(15,4))
+sns.heatmap(cor_mat,annot=True)
 
 plt.show()
