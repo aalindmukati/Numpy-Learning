@@ -42,6 +42,6 @@ print(tips.head())
 #--------------Heatmap------------------
 cor_mat=tips.corr(numeric_only=True)
 plt.figure(figsize=(15,4))
-sns.heatmap(cor_mat,annot=True)
+sns.heatmap(cor_mat,annot=True) #ignore the diagnals since they are twin values
 
 plt.show()
