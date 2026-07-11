@@ -6,15 +6,24 @@ scalar = 5.0
 print(scalar)
 print('type of scalar',type(scalar))
 
+print('-'*35)
+
+# vector - 1D data
 vector = np.array(
     [3,7,2]
 )
 print(vector)
 print("shape of vector",vector.shape)
 
+print('-'*35)
+
+
+# Matrix - 2D data
 Matrix = np.array(
     [[3,7,2],
     [2,3,9]]
 )
 print(Matrix)
 print("shape of Matrix",Matrix.shape)
+
+print('-'*35)
