@@ -13,5 +13,10 @@ y = np.array([0,1,0])
 print ("Data matrix X: \n", X)
 print (" shape:", X.shape)
 
+print('-'*35)
+
 print ("Output Vector y: \n", y)
 print("y shape:", y.shape) 
+
+print('-'*35)
+
