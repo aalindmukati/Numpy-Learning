@@ -9,6 +9,9 @@ print('type of scalar',type(scalar))
 print('-'*35)
 
 # vector - 1D data
+print('vector\n')
+
+
 vector = np.array(
     [3,7,2]
 )
@@ -19,6 +22,9 @@ print('-'*35)
 
 
 # Matrix - 2D data
+print('Matrix\n')
+
+
 Matrix = np.array(
     [[3,7,2],
     [2,3,9]]
@@ -26,4 +32,24 @@ Matrix = np.array(
 print(Matrix)
 print("shape of Matrix",Matrix.shape)
 
+print('-'*35)
+
+# Tensor - 3D data
+print('Tensor\n')
+
+
+Tensor = np.array(
+    [
+        [
+            [1,2,3],
+            [3,9,8]
+        ],
+        [
+            [5,6,8],
+            [11,23,4]
+        ]
+    ]
+)
+print(Tensor)
+print("shape of Tensor",Tensor.shape)
 print('-'*35)
