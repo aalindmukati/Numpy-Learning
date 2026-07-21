@@ -23,17 +23,34 @@ v2=np.array((4,2))
 
 # Multiplication and Linear Model 
 
-X = np.array([
-    [1,30],
-    [2,50],
-    [3,70]])
+# X = np.array([
+#     [1,30],
+#     [2,50],
+#     [3,70]])
 
-print(X.shape)
-w = np.array([
-    [0.5],
-    [3]])
+# print(X.shape)
 
-print(w.shape)
 
-z = X @ w 
-print(z)
+# w = np.array([
+#     [0.5],
+#     [3]])
+
+# print(w.shape)
+
+# Xw = X @ w 
+# print(Xw)
+
+
+# bias = 2.0
+# y = Xw + bias
+
+# print(y)
+
+data = np.array([
+    [85, 26.6, 31, 0],
+    [183, 23.3, 32, 1],
+    [89, 28.1, 21, 0],
+    [137, 43.1, 33, 1]
+])
+print ("Full data matrix: \n", data) 
+print ("Data shape:", data. shape)
