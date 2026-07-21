@@ -13,10 +13,27 @@ v2=np.array((4,2))
 
 #Euclidean Distance]
 
-diff = v1- v2
+# diff = v1- v2
 
-print(diff)
+# print(diff)
 
-distance = np.linalg.norm(diff)
+# distance = np.linalg.norm(diff)
 
-print(distance)
+# print(distance)
+
+# Multiplication and Linear Model 
+
+X = np.array([
+    [1,30],
+    [2,50],
+    [3,70]])
+
+print(X.shape)
+w = np.array([
+    [0.5],
+    [3]])
+
+print(w.shape)
+
+z = X @ w 
+print(z)
