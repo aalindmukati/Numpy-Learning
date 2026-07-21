@@ -14,8 +14,8 @@ print(tips.head())
 # figax1 = plt.subplots(figsize=(15,8))
 
 #--------------Histogram----------------
-# sns.histplot(tips['total_bill'],kde=True)
-# plt.title('Bill distribution')
+sns.histplot(tips['total_bill'],kde=True)
+plt.title('Bill distribution')
 #---------------------------------------
 
 #--------------Box-Plot----------------
