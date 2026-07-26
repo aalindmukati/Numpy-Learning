@@ -52,19 +52,38 @@ mode_val = col.mode()[0]
 jj = plt.subplots(figsize=(15,6))
 
 # first plot
-plt.subplot(1,2,1)
-sns.histplot(df['tip'],kde=True,color='red')
-plt.title(f"Distribution of tips (skew){df['tip'].skew():.2f}")
+# ! plt.subplot(1,2,1)
+# ! sns.histplot(df['tip'],kde=True,color='red')
+# ! plt.title(f"Distribution of tips (skew){df['tip'].skew():.2f}")
 
-#second plot 
-plt.subplot(1,2,2)
-sns.histplot(df['total_bill'],kde=True,color='blue')
-plt.title(f"Distribution of bill (skew){df['tip'].skew():.2f}")
+# #second plot 
+# ! plt.subplot(1,2,2)
+# ! sns.histplot(df['total_bill'],kde=True,color='blue')
+# ! plt.title(f"Distribution of bill (skew){df['tip'].skew():.2f}")
 
-plt.tight_layout() #used for cleaner layout 
-plt.show()
+# plt.tight_layout() #used for cleaner layout 
 
 # TODO Interpretation:
 # TODO Skewness = 0: Perfectly Normal
 # TODO Skewness > 0: Right Skewed (Tail is on the right)
 # TODO Skewness < 0: Left Skewed (Tail is on the left)
+
+# * Outlier Detection
+
+sns.boxplot(x=df['total_bill'],palette='rocket')
+# plt.show()
+# The box here shoes the central 50% of the data adn each line of the box tells us the Quartile so first one would be Q1 cnetral would be IQR and and last one is Q3
+
+q1 = df['total_bill'].quantile(0.25)
+q3 = df['total_bill'].quantile(0.75)
+iqr = q3-q1
+
+lower_bound = q1 - 1.5*iqr
+upper_bound = q3 + 1.5*iqr
+
+print(f"lower bound {lower_bound:.2f}")
+print(f"upper bound {upper_bound:.2f}")
+
+outliers = df[(df["total_bill"] < lower_bound) | (df['total_bill'] > upper_bound)]
+print(f'number of outlier is {len(outliers)}')
+print(outliers)
