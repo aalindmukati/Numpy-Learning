@@ -21,7 +21,6 @@ mode_val = col.mode()[0]
 # ? print(median_val)
 # ? print(mode_val)
 
-# jj = plt.subplots(figsize=(15,6))
 
 # ! sns.histplot(col,kde=True,color='b') # right skew distribution
 # !plt.axvline(median_val,color='green',linestyle='-',label=f'Median {median_val:.2f}')
@@ -49,3 +48,8 @@ mode_val = col.mode()[0]
 
 
 print(df.describe())
+
+jj = plt.subplots(figsize=(15,6))
+
+plt.subplot(1,2,1)
+sns.histplot()
