@@ -47,9 +47,24 @@ mode_val = col.mode()[0]
 # ! print(f'iqr {iqr:.2f}')
 
 
-print(df.describe())
+# print(df.describe()) used to get the df info
 
 jj = plt.subplots(figsize=(15,6))
 
+# first plot
 plt.subplot(1,2,1)
-sns.histplot()
+sns.histplot(df['tip'],kde=True,color='red')
+plt.title(f"Distribution of tips (skew){df['tip'].skew():.2f}")
+
+#second plot 
+plt.subplot(1,2,2)
+sns.histplot(df['total_bill'],kde=True,color='blue')
+plt.title(f"Distribution of bill (skew){df['tip'].skew():.2f}")
+
+plt.tight_layout() #used for cleaner layout 
+plt.show()
+
+# TODO Interpretation:
+# TODO Skewness = 0: Perfectly Normal
+# TODO Skewness > 0: Right Skewed (Tail is on the right)
+# TODO Skewness < 0: Left Skewed (Tail is on the left)
