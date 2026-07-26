@@ -70,20 +70,30 @@ jj = plt.subplots(figsize=(15,6))
 
 # * Outlier Detection
 
-sns.boxplot(x=df['total_bill'],palette='rocket')
-# plt.show()
+# ! sns.boxplot(x=df['total_bill'],palette='rocket')
 # The box here shoes the central 50% of the data adn each line of the box tells us the Quartile so first one would be Q1 cnetral would be IQR and and last one is Q3
 
-q1 = df['total_bill'].quantile(0.25)
-q3 = df['total_bill'].quantile(0.75)
-iqr = q3-q1
+# ! q1 = df['total_bill'].quantile(0.25)
+# ! q3 = df['total_bill'].quantile(0.75)
+# ! iqr = q3-q1
 
-lower_bound = q1 - 1.5*iqr
-upper_bound = q3 + 1.5*iqr
+# ! lower_bound = q1 - 1.5*iqr
+# ! upper_bound = q3 + 1.5*iqr
 
-print(f"lower bound {lower_bound:.2f}")
-print(f"upper bound {upper_bound:.2f}")
+# ! print(f"lower bound {lower_bound:.2f}")
+# ! print(f"upper bound {upper_bound:.2f}")
 
-outliers = df[(df["total_bill"] < lower_bound) | (df['total_bill'] > upper_bound)]
-print(f'number of outlier is {len(outliers)}')
-print(outliers)
+# ! outliers = df[(df["total_bill"] < lower_bound) | (df['total_bill'] > upper_bound)]
+# ! print(f'number of outlier is {len(outliers)}')
+# ! print(outliers)
+
+# Correlation Matrix Calculation
+
+numerical_df = df.select_dtypes(include=(np.number))
+corr_mat = numerical_df.corr()
+
+print(corr_mat)
+
+sns.heatmap(corr_mat, annot=True,cmap='coolwarm',fmt='.2f',linewidths=0.3)
+plt.title('Correlation Matrix')
+plt.show()
