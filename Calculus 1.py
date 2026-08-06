@@ -49,3 +49,22 @@ plt.plot(x_val,y_val)
 plt.title("Curve")
 plt.grid(alpha=0.5)
 plt.show()
+
+# ! If we move x a tiny bit and see how much y changes, that change in y divided by change in x gives an approximate slope.
+
+def slope_est(func,x,h=0.00001):
+    x2=x+h
+    y=Curve(x)
+    y2=func(x2)
+    dy=y2-y
+    dx=h
+    slope = dy/dx
+    return slope
+
+points = [-2,0,2]
+
+print ("Slope estimates for y=x^2 using small change in x")
+
+for p in points:
+    s = slope_est(Curve,p)
+    print(f'x={p}->estimated slope is {s:.2f}')
