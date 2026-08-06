@@ -58,8 +58,8 @@ print ("Data shape:", data. shape)
 x_features = data[:,:-1] #this ':' mean give me all the values so it is in first means give me all the values of the x thing and :-1 means give everything except the last data
 y_features = data[:,:-1]
 
-print('Feature matrix',x_features)
+print('Feature matrix \n',x_features)
 print('Shape of feature matrix',x_features.shape)
 
-print('Feature matrix',y_features)
+print('Feature matrix \n',y_features)
 print('Shape of feature matrix',y_features.shape)
