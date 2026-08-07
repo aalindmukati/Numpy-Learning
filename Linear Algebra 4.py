@@ -11,7 +11,7 @@ v2=np.array((4,2))
 # dot = np.dot(v1,v2)
 # print(dot)
 
-#Euclidean Distance]
+# ! Euclidean Distance  {do vector k beech ki space ka distance}
 
 # diff = v1- v2
 
