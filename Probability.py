@@ -23,3 +23,4 @@ print(vals)
 print(counts)
 sns.histplot(dice,discrete=True,kde=True)
 plt.show()
+
