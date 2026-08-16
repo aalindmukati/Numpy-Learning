@@ -4,3 +4,12 @@ import seaborn as sns
 import pandas as pd
 
 np.random.seed(42)
+
+n = 500
+outcomes = np.random.choice(['H','T'],size = n) # so it creates an array with n elements in it and in that it can be either h or t
+# print(outcomes[:150])
+heads = np.sum(outcomes='H')
+tails = np.sum(outcomes='T')
+
+print('Head:',heads)
+print('Tails:',tails)
