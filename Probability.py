@@ -5,6 +5,8 @@ import pandas as pd
 
 np.random.seed(42)
 
+#* Coin Toss Simulation
+
 n = 1000
 # outcomes = np.random.choice(['H','T'],size = n) # ! so it creates an array with n elements in it and in that it can be either h or t
 # print(outcomes[:150])
@@ -24,20 +26,48 @@ p_dice = np.mean(dice == 4)
 # sns.histplot(dice,discrete=True,kde=True)
 # plt.show()
 
-data = pd.DataFrame({
-    'Likes ML': np.random.choice([1,0] ,size =100,p=[0.6,0.4]) #? iska idhar matlab hai ki out of 100,60% chance h ki kisi bande ko ml pasand ho 
-})
-data ["Likes DL"] = [
-    np.random.choice([1,0], p = [0.7,0.3]) if ml else #? ML pasand hai = Matlab 70% chance hai ki DL bhi pasand ho (1) aur 30% chance hai ki nahi ho (0).
-    np.random.choice([1,0], p = [ 0.2,0.8])
-                     for ml in data['Likes ML'] #? ML nahi pasand hai = Matlab 80% chance hai ki value 9 ho aur 20% chance hai ki 1 ho
-]
+#* Conditional Probability
 
-z = data.head()
-print(z)
+# data = pd.DataFrame({
+#     'Likes ML': np.random.choice([1,0] ,size =100,p=[0.6,0.4]) #? iska idhar matlab hai ki out of 100,60% chance h ki kisi bande ko ml pasand ho 
+# })
+# data ["Likes DL"] = [
+#     np.random.choice([1,0], p = [0.7,0.3]) if ml else #? ML pasand hai = Matlab 70% chance hai ki DL bhi pasand ho (1) aur 30% chance hai ki nahi ho (0).
+#     np.random.choice([1,0], p = [ 0.2,0.8])
+#                      for ml in data['Likes ML'] #? ML nahi pasand hai = Matlab 80% chance hai ki value 9 ho aur 20% chance hai ki 1 ho
+# ]
 
-p_ml = data['Likes DL'].mean()
-p_dl = data['Likes ML'].mean()
+# z = data.head()
+# print(z)
 
-print(round(p_ml,2))
-print(round(p_dl,2))
+# p_ml = data['Likes ML'].mean()
+# p_dl = data['Likes DL'].mean()
+
+# p_dl_given_ml = data[data['Likes ML']==1]['Likes DL'].mean() #? subset dataset for people who likes ml and in then the ones who also like dl
+
+# print('probability of ml = ',round(p_ml,2))
+# print('probability of dl = ',round(p_dl,2))
+# print('probability of ml->dl = ',round(p_dl_given_ml,2))
+
+#* Independence vs Dependence
+
+n=5000
+
+# TODO Uniform Distributuion
+
+# plt.figure(figsize=(10,8))
+# p = sns.histplot(np.random.uniform(0,1,n),bins=20,alpha=0.7,color='black',kde=True) 
+# p.lines[0].set_color('red')
+# plt.show()
+
+# TODO Normal Distribution 
+
+# plt.figure(figsize=(10,8))
+# p = sns.histplot(np.random.normal(0,1,n),bins=20,alpha=0.7,color='black',kde=True) 
+# p.lines[0].set_color('red')
+# plt.show()
+
+#* ML Style Example 
+
+predic = np.random.rand(10)
+print("whats the prediction probability",predic*100)
